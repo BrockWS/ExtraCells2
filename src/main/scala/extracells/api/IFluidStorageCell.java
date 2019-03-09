@@ -1,9 +1,19 @@
 package extracells.api;
 
-import appeng.api.implementations.items.IStorageCell;
-import appeng.api.storage.data.IAEFluidStack;
+import java.util.ArrayList;
+
+import net.minecraft.item.ItemStack;
+
+import net.minecraftforge.fluids.Fluid;
 
 
-public interface IFluidStorageCell extends IStorageCell<IAEFluidStack> {
+public interface IFluidStorageCell extends IStorageCellBase {
+
+	/**
+	 * @param ItemStack
+	 * @return the Fluid Filter. An empty ArrayList or null if the cell accepts
+	 * all Fluids
+	 */
+	ArrayList<Fluid> getFilter(ItemStack is);
 
 }

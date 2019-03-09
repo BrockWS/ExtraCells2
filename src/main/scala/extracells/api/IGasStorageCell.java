@@ -1,9 +1,20 @@
 package extracells.api;
 
-import appeng.api.implementations.items.IStorageCell;
+import java.util.ArrayList;
 
-import extracells.api.gas.IAEGasStack;
+import net.minecraft.item.ItemStack;
 
-public interface IGasStorageCell extends IStorageCell<IAEGasStack> {
+import net.minecraftforge.fluids.Fluid;
+
+import appeng.api.storage.ICellWorkbenchItem;
+
+public interface IGasStorageCell extends IStorageCellBase {
+
+	/**
+	 * @param ItemStack
+	 * @return the Gas Filter. An empty ArrayList or null if the cell accepts
+	 * all Gas
+	 */
+	ArrayList<Object> getFilter(ItemStack is);
 
 }

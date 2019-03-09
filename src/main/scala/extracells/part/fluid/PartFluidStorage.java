@@ -7,6 +7,7 @@ import java.util.List;
 
 import appeng.api.storage.*;
 
+import extracells.api.IHandlerStorageBase;
 import extracells.inventory.cell.IHandlerPartBase;
 import extracells.util.StorageChannels;
 import net.minecraft.entity.player.EntityPlayer;
